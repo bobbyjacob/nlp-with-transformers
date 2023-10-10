@@ -8,7 +8,7 @@ is_kaggle = "kaggle_secrets" in sys.modules
 torch_to_cuda = {"1.10.0": "cu113", "1.9.0": "cu111", "1.9.1": "cu111"}
 
 
-def install_requirements(
+def install_requirementsZ(
     is_chapter2: bool = False, 
     is_chapter6: bool = False,
     is_chapter7: bool = False,
@@ -39,7 +39,7 @@ def install_requirements(
         print("✅ Git LFS installed!")
 
     if is_chapter2:
-        transformers_cmd = "python -m pip install transformers==4.13.0 datasets==2.8.0".split()
+        transformers_cmd = "python -m pip install transformers datasets".split()
         process_scatter = subprocess.run(
             transformers_cmd,
             stdout=subprocess.PIPE,
